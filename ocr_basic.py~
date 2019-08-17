@@ -12,11 +12,17 @@ img = Image.open("/Users/Victor/Documents/Github/OCR/test.jpg")
     #not quite sure what mat is
 image = cv2.imread("/Users/Victor/Documents/Github/OCR/test.jpg")
 
+#in order to threshold, you must have a grayscale image
+#i think in the case of this project, out goal is to simply binarize the image into black and white
+#for our early images and tests, we will set a simple value as i mostly want to deal with clearn images
+#to learn about image process
+
 #going closer to 0 means changin black pixels to white
 #i assume the opposite going the other way
 ret, threshold = cv2.threshold(image, 180, 255, cv2.THRESH_BINARY)
 
-text = image_to_string(img)
+text_og = image_to_string(img)
+text_threshold = image_to_string(threshold)
 #prints text to command console
 #will prob change to output file instead at some point
 #print(text)
@@ -32,17 +38,10 @@ cv2.destroyAllWindows()
 #can also save image
 #cv2.imwrite('filename.jpg', img)
 
-#in order to threshold, you must have a grayscale image
-#i think in the case of this project, out goal is to simply binarize the image into black and white
-
-#for our early images and tests, we will set a simple value as i mostly want to deal with clearn images
-#to learn about image process
-
 #this comes later down the line in which we take some statistical value of data from a not so great imgae
 #determine the threshold, and binarize based off of that
-
-
-
+#this would be a point to bring up with jonny about what type of statistical model we should use
+    #or if we really want to go crazy, we do machine learning to determine it
 
 
 #at some point we might have to take into account the amount of pixels present per image but for

@@ -1,6 +1,6 @@
 .idea
-.ocr_basic.py.un~
-ocr_basic.py~
-..gitignore.un~
-.gitignore~
-
+*~
+*.un~
+*.py~
+*.py.un~
+*.txt.un~

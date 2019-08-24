@@ -27,6 +27,16 @@ text_threshold = image_to_string(threshold)
 #will prob change to output file instead at some point
 #print(text)
 
+#writes to the file about what it has read/scanned
+#"w" makes the file writable
+original = open("no_filter.txt", "w")
+original.write(text_og)
+original.close()
+
+threshold_text = open("threshold_static.txt", "w")
+threshold_text.write(text_threshold)
+threshold_text.close()
+
 #displays scanned image to the user
 cv2.imshow('oringal image',image)
 cv2.imshow('threshold 100', threshold)
